@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="ass.css">
+    <title>FormValidation</title>
+</head>
+
+
+<body>
+    <div class="box">
+        <div class="glitch">Заявка на отчисление</div>
+     </div>
+    <form name="myForm" method="post" onsubmit="return validateForm();" action="index.html">
+        <div class="form-group">
+            <label for="name">Имя</label>
+            <label class="form-error">Введите имя!</label>
+            <input type="text" name="name" id="name" placeholder="Ваше имя...">
+        </div>
+        <div class="form-group">
+            <label for="second_name">Фамилия</label>
+            <label class="form-error">Введите фамилию!</label>
+            <input type="text" name="second_name" id="second_name" placeholder="Ваша фамилия...">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" placeholder="Ваша почта...">
+        </div>
+        <div class="form-group">
+            <label for="passwd1">Пароль</label>
+            <input type="password" name="passwd1" id="passwd1" placeholder="Придумайте пароль...">
+        </div>
+        <div class="form-group">
+            <label for="passwd2">Повторите пароль</label>
+            <input type="password" name="passwd2" id="passwd2" placeholder="Повторите пароль...">
+        </div>
+        <div class="form-group d-flex">
+            <div class="form-group">
+                <label for="male">Мужской</label>
+                <input type="radio" id="male" name="gender">
+            </div>
+            <div class="form-group">
+                <input type="radio" id="female" name="gender">
+                <label for="female">Женский</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="opt">Какой курс?</label>
+            <select name="opt" id="opt">
+                <option selected>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <div class="form-group d-flex">
+            <div class="form-group" style="justify-content: flex-start">
+                <label for="subscribe" style="margin-right: 30px">Получить письмо об отчислении</label>
+                <input type="checkbox" name="subscribe" id="subscribe">
+            </div>
+        </div>
+        <button type="submit">Отправить</button>
+    </form>
+    <script src="assets/app.js"></script>
+</body>
+</html>
