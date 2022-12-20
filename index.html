@@ -10,60 +10,60 @@
 
 
 <body>
-    <div class="box">
-        <div class="glitch">Заявка на отчисление</div>
-     </div>
-    <form name="myForm" method="post" onsubmit="return validateForm();" action="index.html">
-        <div class="form-group">
-            <label for="name">Имя</label>
-            <label class="form-error">Введите имя!</label>
-            <input type="text" name="name" id="name" placeholder="Ваше имя...">
-        </div>
-        <div class="form-group">
-            <label for="second_name">Фамилия</label>
-            <label class="form-error">Введите фамилию!</label>
-            <input type="text" name="second_name" id="second_name" placeholder="Ваша фамилия...">
-        </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="text" name="email" id="email" placeholder="Ваша почта...">
-        </div>
-        <div class="form-group">
-            <label for="passwd1">Пароль</label>
-            <input type="password" name="passwd1" id="passwd1" placeholder="Придумайте пароль...">
-        </div>
-        <div class="form-group">
-            <label for="passwd2">Повторите пароль</label>
-            <input type="password" name="passwd2" id="passwd2" placeholder="Повторите пароль...">
-        </div>
-        <div class="form-group d-flex">
-            <div class="form-group">
-                <label for="male">Мужской</label>
-                <input type="radio" id="male" name="gender">
+    
+    <div class="page">
+        <form class="js-form" action="" novalidate >
+            <h1 class="text">Заявка об отчислении</h1>
+            <div class="form__group">
+                <input type="text" class="input js-input" name="name" placeholder="Ваше имя..."  >
             </div>
-            <div class="form-group">
-                <input type="radio" id="female" name="gender">
-                <label for="female">Женский</label>
+            <div class="form__group">
+                <input type="text" class="input js-input" name="last name" placeholder="Ваша фамилия..."  >
             </div>
-        </div>
-        <div class="form-group">
-            <label for="opt">Какой курс?</label>
-            <select name="opt" id="opt">
-                <option selected>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-            </select>
-        </div>
-        <div class="form-group d-flex">
-            <div class="form-group" style="justify-content: flex-start">
-                <label for="subscribe" style="margin-right: 30px">Получить письмо об отчислении</label>
-                <input type="checkbox" name="subscribe" id="subscribe">
+            <div class="form__group">
+                <input type="email" class="input js-input js-input-email" name="email" placeholder="Ваш email..."  >
             </div>
-        </div>
-        <button type="submit">Отправить</button>
-    </form>
-    <script src="assets/app.js"></script>
+            <div class="form__group">
+                <input type="password" class="input js-input js-input-passwd1" name="passwd1" placeholder="Введите пароль..." >
+            </div>
+
+            <div class="form__group">
+                <input type="password" class="input js-input js-input-passwd2" name="passwd2" placeholder="Повторите пароль..." >
+            </div>
+
+            <div class="form__group d-flex">
+                <div class="form__group">
+                    <label class="radio__label" for="privacy_check">Мужской</label>
+                    <input type="radio" class="radio__input js-input-gender" name="gender" id="privacy_check">
+                </div>
+                <div class="form__group">
+                    <label class="radio__label" for="privacy_check">Женский</label>
+                    <input type="radio" class="radio__input js-input-gender" name="gender" id="privacy_check">
+                </div>
+            </div>
+
+            <div class="form__group">
+                <label for="opt">Какой курс?</label>
+                <select name="opt" id="opt">
+                    <option selected>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+
+            <div class="form__group d-flex">
+                <div class="form__group" style="justify-content: flex-start">
+                    <label for="subscribe" style="margin-right: 30px">Получить письмо</label>
+                    <input type="checkbox" name="subscribe" id="subscribe">
+                </div>
+            </div>
+            <button class="btn" type="submit">
+                Отправить
+            </button>
+        </form>
+    </div>
+    <script src="ass.js"></script>
 </body>
 </html>
